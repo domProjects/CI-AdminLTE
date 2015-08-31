@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-md-12">
                              <div class="box">
                                 <div class="box-header with-border">
-                                    <h3 class="box-title"><a href="<?php echo site_url('admin/groups/create'); ?>" class="btn btn-block btn-primary"><i class="fa fa-plus"></i> <?php echo lang('groups_create'); ?></a></h3>
+                                    <h3 class="box-title"><?php echo anchor('admin/groups/create', '<i class="fa fa-plus"></i> '. lang('groups_create'), array('class' => 'btn btn-block btn-primary btn-flat')); ?></h3>
                                 </div>
                                 <div class="box-body">
                                     <table class="table table-striped table-hover">
