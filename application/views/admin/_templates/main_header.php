@@ -124,7 +124,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <a href="<?php echo site_url('admin/users/profile/'.$user_login['id']); ?>" class="btn btn-default btn-flat"><?php echo lang('header_profile'); ?></a>
                                         </div>
                                         <div class="pull-right">
-                                            <a href="<?php echo site_url('auth/logout'); ?>" class="btn btn-default btn-flat"><?php echo lang('header_sign_out'); ?></a>
+                                            <a href="<?php echo site_url('auth/logout/admin'); ?>" class="btn btn-default btn-flat"><?php echo lang('header_sign_out'); ?></a>
                                         </div>
                                     </li>
                                 </ul>
