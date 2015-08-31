@@ -4,6 +4,15 @@
 
 Coming soon
 
+## Browser Compatibility
+Support for most major browsers including Chrome, Firefox, IE9+, Opera and Safari.
+
+## Languages
+  * English
+  * French
+  * Portuguese
+  * ... and more soon
+ 
 ## Dependencies
 | NAME | VERSION | WEB | REPO |
 | :--- | :---: | :---: | :---: |
@@ -13,9 +22,3 @@ Coming soon
 | Ion Auth | 2.0.0 | [Website](http://benedmunds.com/ion_auth) | [Github](https://github.com/benedmunds/CodeIgniter-Ion-Auth)
 | jQuery | 2.1.4 | [Website](http://jquery.com) | [Github](https://github.com/jquery/jquery)
 | Font Awesome | 4.4.0 | [Website](http://fortawesome.github.io/Font-Awesome/) | [Github](https://github.com/FortAwesome/Font-Awesome)
-
-## Languages
-  * English
-  * French
-  * Portuguese
-  * ... and more soon
