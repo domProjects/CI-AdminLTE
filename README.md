@@ -5,8 +5,8 @@
 Coming soon
 
 ## Dependencies
-| NAME | VERSION | WEB | REPO
-| --- | --- | --- | ---
+| NAME | VERSION | WEB | REPO |
+| :--- | :---: | :---: | :---: |
 | CodeIgniter | 3.0.1 | [Website](http://codeigniter.com) | [Github](https://github.com/bcit-ci/CodeIgniter/)
 | AdminLTE | 2.3.0 | [Website](https://almsaeedstudio.com) | [Github](https://github.com/almasaeed2010/AdminLTE/)
 | Bootstrap | 3.3.5 | [Website](http://getbootstrap.com) | [Github](https://github.com/twbs/bootstrap)
