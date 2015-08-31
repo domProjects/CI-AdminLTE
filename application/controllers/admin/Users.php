@@ -94,7 +94,7 @@ class Users extends Admin_Controller {
 			$this->data['email'] = array(
 				'name'  => 'email',
 				'id'    => 'email',
-				'type'  => 'text',
+				'type'  => 'email',
                 'class' => 'form-control',
 				'value' => $this->form_validation->set_value('email'),
 			);
@@ -108,7 +108,8 @@ class Users extends Admin_Controller {
 			$this->data['phone'] = array(
 				'name'  => 'phone',
 				'id'    => 'phone',
-				'type'  => 'text',
+				'type'  => 'tel',
+                'pattern' => '^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$',
                 'class' => 'form-control',
 				'value' => $this->form_validation->set_value('phone'),
 			);
@@ -270,7 +271,8 @@ class Users extends Admin_Controller {
 		$this->data['phone'] = array(
 			'name'  => 'phone',
 			'id'    => 'phone',
-			'type'  => 'text',
+            'type'  => 'tel',
+            'pattern' => '^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$',
             'class' => 'form-control',
 			'value' => $this->form_validation->set_value('phone', $user->phone)
 		);
