@@ -11,9 +11,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </footer>
         </div>
 
-
-        <script src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap" async defer></script>
-
         <script src="<?php echo base_url($frameworks_dir . '/jquery/jquery.min.js'); ?>"></script>
         <script src="<?php echo base_url($frameworks_dir . '/bootstrap/js/bootstrap.min.js'); ?>"></script>
         <script src="<?php echo base_url($plugins_dir . '/slimscroll/slimscroll.min.js'); ?>"></script>
@@ -22,11 +19,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <script src="<?php echo base_url($plugins_dir . '/animsition/animsition.min.js'); ?>"></script>
 <?php endif; ?>
 
-
         <script src="<?php echo base_url($frameworks_dir . '/highcharts/highcharts.js'); ?>"></script>
         <script src="<?php echo base_url($frameworks_dir . '/highcharts/highcharts-more.js'); ?>"></script>
         <script src="<?php echo base_url($frameworks_dir . '/highcharts/modules/solid-gauge.js'); ?>"></script>
-
 
         <script src="<?php echo base_url($frameworks_dir . '/adminlte/js/adminlte.min.js'); ?>"></script>
         <script src="<?php echo base_url($frameworks_dir . '/domprojects/js/dp.min.js'); ?>"></script>

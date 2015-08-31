@@ -370,9 +370,6 @@ class Users extends Admin_Controller {
 
 	public function profile($id)
 	{
-        /* Load */
-        $this->load->library('common/Ip2geolocation/Ip2geolocation');
-
         /* Breadcrumbs */
         $this->breadcrumbs->unshift(2, lang('menu_users_profile'), 'admin/groups/profile');
         $this->data['breadcrumb'] = $this->breadcrumbs->show();

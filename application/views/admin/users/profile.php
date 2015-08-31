@@ -82,51 +82,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 </div>
                                 <div class="box-body">
 
-                                    <div id="map" style="height:408px;"></div>
-
-<?php
-$ipgeo = $this->ip2geolocation->get('84.97.101.146');
-foreach ($ipgeo as $k => $value)
-{
-    $latitude  = $value['latitude'];
-    $longitude = $value['longitude'];
-}
-?>
-
-<script>
-    function initMap() {
-        var cairo = {lat: <?php echo $latitude; ?>, lng: <?php echo $longitude; ?>};
-
-        var map = new google.maps.Map(document.getElementById('map'), {
-            scaleControl: true,
-            center: cairo,
-            zoom: 13,
-            mapTypeControl: true,
-            mapTypeControlOptions: {
-                style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-                position: google.maps.ControlPosition.TOP_CENTER
-            },
-            zoomControl: true,
-            zoomControlOptions: {
-                style: google.maps.ZoomControlStyle.LARGE,
-                position: google.maps.ControlPosition.LEFT_CENTER
-            },
-            scaleControl: true,
-            streetViewControl: true,
-            streetViewControlOptions: {
-                position: google.maps.ControlPosition.LEFT_TOP
-            }
-        });
-
-        var infowindow = new google.maps.InfoWindow;
-        infowindow.setContent('azerty');
-
-        var marker = new google.maps.Marker({map: map, position: cairo});
-        marker.addListener('click', function() {
-            infowindow.open(map, marker);
-        });
-    }
-</script>
 
                                 </div>
                             </div>
