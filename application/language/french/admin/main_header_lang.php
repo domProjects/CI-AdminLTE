@@ -10,15 +10,15 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['header_you_have']     = 'You have';
+$lang['header_you_have']     = 'Vous avez';
 $lang['header_message']      = 'message';
 $lang['header_notification'] = 'notification';
-$lang['header_task']         = 'task';
-$lang['header_view_all']     = 'View all';
-$lang['header_complete']     = 'Complete';
-$lang['header_member_since'] = 'Member since';
-$lang['header_followers']    = 'Followers';
-$lang['header_sales']        = 'Sales';
-$lang['header_friends']      = 'Friends';
-$lang['header_profile']      = 'Profile';
-$lang['header_sign_out']     = 'Sign out';
+$lang['header_task']         = 'tâche';
+$lang['header_view_all']     = 'Voir tous';
+$lang['header_complete']     = 'Complète';
+$lang['header_member_since'] = 'Membre depuis';
+$lang['header_followers']    = 'Abonnés';
+$lang['header_sales']        = 'Vente';
+$lang['header_friends']      = 'Amis';
+$lang['header_profile']      = 'Profil';
+$lang['header_sign_out']     = 'Déconnexion';
