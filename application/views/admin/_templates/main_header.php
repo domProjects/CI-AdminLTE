@@ -45,6 +45,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </li>
 
 <?php endif; ?>
+
+<?php echo $header_alert_file_install; ?>
+
 <?php if ($admin_prefs['notifications_menu'] == TRUE): ?>
                             <!-- Notifications -->
                             <li class="dropdown notifications-menu">

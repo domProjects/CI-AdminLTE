@@ -20,3 +20,7 @@ $lang['actions_reset']          = 'Reset';
 $lang['actions_see']            = 'See';
 $lang['actions_submit']         = 'Submit';
 $lang['actions_yes']            = 'Yes';
+$lang['actions_delete']         = 'Delete';
+
+$lang['actions_security_error']     = 'Security error';
+$lang['actions_file_install_exist'] = 'You must %s the installation files.';

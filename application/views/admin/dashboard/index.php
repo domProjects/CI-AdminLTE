@@ -10,6 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 </section>
 
                 <section class="content">
+                    <?php echo $dashboard_alert_file_install; ?>
                     <div class="row">
                         <div class="col-md-3 col-sm-6 col-xs-12">
                             <div class="info-box">
