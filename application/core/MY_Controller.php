@@ -68,7 +68,7 @@ class Admin_Controller extends MY_Controller
             else
             {
                 $this->data['dashboard_alert_file_install'] = NULL;
-                $this->data['header_alert_file_install']    = NULL; /* << A MODIFIER !!!
+                $this->data['header_alert_file_install']    = NULL; /* << A MODIFIER !!! */
             }
 
             
