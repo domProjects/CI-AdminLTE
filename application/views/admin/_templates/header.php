@@ -7,9 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <head>
         <meta charset="<?php echo $charset; ?>">
         <title><?php echo $title; ?></title>
+<?php if ($mobile === FALSE): ?>
         <!--[if IE 8]>
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
+<?php endif; ?>
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <meta name="google" content="notranslate">
         <meta name="robots" content="noindex, nofollow">
@@ -20,17 +22,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link rel="stylesheet" href="<?php echo base_url($frameworks_dir . '/ionicons/css/ionicons.min.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url($frameworks_dir . '/adminlte/css/adminlte.min.css'); ?>">
         <link rel="stylesheet" href="<?php echo base_url($frameworks_dir . '/adminlte/css/skins/skin-blue.min.css'); ?>">
-<?php if ($admin_prefs['transition_page'] == TRUE): ?>
+<?php if ($admin_prefs['transition_page'] == TRUE && $mobile === FALSE): ?>
         <link rel="stylesheet" href="<?php echo base_url($plugins_dir . '/animsition/animsition.min.css'); ?>">
 <?php endif; ?>
         <link rel="stylesheet" href="<?php echo base_url($frameworks_dir . '/domprojects/css/dp.min.css'); ?>">
+<?php if ($mobile === FALSE): ?>
         <!--[if lt IE 9]>
             <script src="<?php echo base_url($plugins_dir . '/html5shiv/html5shiv.min.js'); ?>"></script>
             <script src="<?php echo base_url($plugins_dir . '/respond/respond.min.js'); ?>"></script>
         <![endif]-->
+<?php endif; ?>
     </head>
     <body class="hold-transition skin-blue fixed sidebar-mini">
-<?php if ($admin_prefs['transition_page'] == TRUE): ?>
+<?php if ($admin_prefs['transition_page'] == TRUE && $mobile === FALSE): ?>
         <div class="wrapper animsition">
 <?php else: ?>
         <div class="wrapper">

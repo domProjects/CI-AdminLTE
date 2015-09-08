@@ -12,7 +12,7 @@ class MY_Controller extends CI_Controller
         $this->load->database();
         $this->load->config('common/dp_config');
         $this->load->config('common/dp_language');
-        $this->load->library(array('form_validation', 'ion_auth', 'template'));
+        $this->load->library(array('form_validation', 'ion_auth', 'template', 'common/mobile_detect'));
         $this->load->helper(array('array', 'language', 'url'));
         $this->load->model('common/prefs_model');
 
@@ -53,12 +53,22 @@ class Admin_Controller extends MY_Controller
             /* Load library function  */
             $this->breadcrumbs->unshift(0, $this->lang->line('menu_dashboard'), 'admin/dashboard');
 
+            /* Any mobile device (phones or tablets) */
+            if ($this->mobile_detect->isMobile())
+            {
+                $this->data['mobile'] = TRUE;
+            }
+            else
+            {
+                $this->data['mobile'] = FALSE;
+            }
+
             /* Data */
-            $this->data['title']        = $this->config->item('title');
-            $this->data['title_lg']     = $this->config->item('title_lg');
-            $this->data['title_mini']   = $this->config->item('title_mini');
-            $this->data['admin_prefs']  = $this->prefs_model->admin_prefs();
-            $this->data['user_login']   = $this->prefs_model->user_info_login($this->ion_auth->user()->row()->id);
+            $this->data['title']       = $this->config->item('title');
+            $this->data['title_lg']    = $this->config->item('title_lg');
+            $this->data['title_mini']  = $this->config->item('title_mini');
+            $this->data['admin_prefs'] = $this->prefs_model->admin_prefs();
+            $this->data['user_login']  = $this->prefs_model->user_info_login($this->ion_auth->user()->row()->id);
 
             if ($this->router->fetch_class() == 'dashboard')
             {
@@ -70,8 +80,6 @@ class Admin_Controller extends MY_Controller
                 $this->data['dashboard_alert_file_install'] = NULL;
                 $this->data['header_alert_file_install']    = NULL; /* << A MODIFIER !!! */
             }
-
-            
         }
     }
 }
