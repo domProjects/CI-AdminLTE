@@ -21,13 +21,9 @@ class Database extends Admin_Controller {
 
 	public function index()
 	{
-        if ( ! $this->ion_auth->logged_in())
+        if ( ! $this->ion_auth->logged_in() OR ! $this->ion_auth->is_admin())
         {
             redirect('auth/login', 'refresh');
-        }
-        elseif ( ! $this->ion_auth->is_admin())
-		{
-            return show_error('You must be an administrator to view this page.');
         }
         else
         {

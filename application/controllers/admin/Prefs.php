@@ -18,15 +18,22 @@ class Prefs extends Admin_Controller {
 
 	public function index()
 	{
-        /* Title Page */
-        $this->page_title->push(lang('menu_preferences'));
-        $this->data['pagetitle'] = $this->page_title->show();
+        if ( ! $this->ion_auth->logged_in() OR ! $this->ion_auth->is_admin())
+        {
+            redirect('auth/login', 'refresh');
+        }
+        else
+        {
+            /* Title Page */
+            $this->page_title->push(lang('menu_preferences'));
+            $this->data['pagetitle'] = $this->page_title->show();
 
-        /* Breadcrumbs */
-        $this->data['breadcrumb'] = $this->breadcrumbs->show();
+            /* Breadcrumbs */
+            $this->data['breadcrumb'] = $this->breadcrumbs->show();
 
-        /* Load Template */
-        $this->template->admin_render('admin/prefs/index', $this->data);
+            /* Load Template */
+            $this->template->admin_render('admin/prefs/index', $this->data);
+        }
 	}
 
 
