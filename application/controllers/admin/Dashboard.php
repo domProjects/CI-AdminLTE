@@ -32,6 +32,11 @@ class Dashboard extends Admin_Controller {
             $this->data['count_groups'] = $this->dashboard_model->get_count_record('groups');
             $this->data['disk_use']     = $this->dashboard_model->disk_space_use();
 
+
+            /* TEST */
+            $this->data['url_exist']    = is_url_exist('http://www.domprojects.com');
+
+
             /* Load Template */
             $this->template->admin_render('admin/dashboard/index', $this->data);
         }
