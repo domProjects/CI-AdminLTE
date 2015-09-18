@@ -67,6 +67,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <li class="<?=active_link_function('interfaces')?>"><a href="<?php echo site_url('admin/prefs/interfaces/admin'); ?>"><?php echo lang('menu_interfaces'); ?></a></li>
                             </ul>
                         </li>
+                        <li class="<?=active_link_controller('files')?>">
+                            <a href="<?php echo site_url('admin/files'); ?>">
+                                <i class="fa fa-file"></i> <span><?php echo lang('menu_files'); ?></span>
+                            </a>
+                        </li>
                         <li class="<?=active_link_controller('database')?>">
                             <a href="<?php echo site_url('admin/database'); ?>">
                                 <i class="fa fa-database"></i> <span><?php echo lang('menu_database_utility'); ?></span>

@@ -36,6 +36,7 @@ $lang['menu_search'] = 'Rechercher';
 /* **************** */$lang['menu_int_admin']   = 'Administration';
 /* **************** */$lang['menu_int_public']  = 'Publique';
 
+/* ****** */$lang['menu_files']                 = 'Fichiers';
 /* ****** */$lang['menu_database_utility']      = 'Utilitaire base de données';
 
 
