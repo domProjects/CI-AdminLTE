@@ -30,7 +30,7 @@ class Auth extends MY_Controller {
 	{
         if ( ! $this->ion_auth->logged_in())
         {
-            /* Loas */
+            /* Load */
             $this->load->config('admin/dp_config');
             $this->load->config('common/dp_config');
 

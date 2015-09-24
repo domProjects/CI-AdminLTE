@@ -22,6 +22,16 @@ class MY_Controller extends CI_Controller
         $this->data['frameworks_dir'] = $this->config->item('frameworks_dir');
         $this->data['plugins_dir']    = $this->config->item('plugins_dir');
         $this->data['avatar_dir']     = $this->config->item('avatar_dir');
+
+        /* Any mobile device (phones or tablets) */
+        if ($this->mobile_detect->isMobile())
+        {
+            $this->data['mobile'] = TRUE;
+        }
+        else
+        {
+            $this->data['mobile'] = FALSE;
+        }
 	}
 }
 
@@ -48,16 +58,6 @@ class Admin_Controller extends MY_Controller
 
             /* Load library function  */
             $this->breadcrumbs->unshift(0, $this->lang->line('menu_dashboard'), 'admin/dashboard');
-
-            /* Any mobile device (phones or tablets) */
-            if ($this->mobile_detect->isMobile())
-            {
-                $this->data['mobile'] = TRUE;
-            }
-            else
-            {
-                $this->data['mobile'] = FALSE;
-            }
 
             /* Data */
             $this->data['title']       = $this->config->item('title');
