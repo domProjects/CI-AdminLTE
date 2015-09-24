@@ -26,7 +26,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <span class="info-box-icon bg-green"><i class="fa fa-check"></i></span>
                                 <div class="info-box-content">
                                     <span class="info-box-text">AdminLTE version</span>
-                                    <span class="info-box-number">2.3.0</span>
+                                    <span class="info-box-number">2.3.1</span>
                                 </div>
                             </div>
                         </div>
