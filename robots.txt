@@ -1,0 +1,7 @@
+# www.robotstxt.org/
+
+# Allow crawling of all content
+User-agent: *
+Disallow: /admin/
+Allow: /
+Sitemap: http://www.domprojects.com/sitemap.xml
