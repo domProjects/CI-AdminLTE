@@ -27,10 +27,36 @@ class MY_Controller extends CI_Controller
         if ($this->mobile_detect->isMobile())
         {
             $this->data['mobile'] = TRUE;
+
+            if ($this->mobile_detect->isiOS()){
+                $this->data['ios']     = TRUE;
+                $this->data['android'] = FALSE;
+            }
+            else if ($this->mobile_detect->isAndroidOS())
+            {
+                $this->data['ios']     = FALSE;
+                $this->data['android'] = TRUE;
+            }
+            else
+            {
+                $this->data['ios']     = FALSE;
+                $this->data['android'] = FALSE;
+            }
+
+            if ($this->mobile_detect->browsers('IE')){
+                $this->data['mobile_ie'] = TRUE;
+            }
+            else
+            {
+                $this->data['mobile_ie'] = FALSE;
+            }
         }
         else
         {
-            $this->data['mobile'] = FALSE;
+            $this->data['mobile']    = FALSE;
+            $this->data['ios']       = FALSE;
+            $this->data['android']   = FALSE;
+            $this->data['mobile_ie'] = FALSE;
         }
 	}
 }
