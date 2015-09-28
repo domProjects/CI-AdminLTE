@@ -58,11 +58,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <?php
 
+/*
 if ($url_exist) {
     echo 'OK';
 } else {
     echo 'KO';
 }
+*/
+
+echo '<p>'.$disk_use_percent.'</p>';
+
 
 ?>
 

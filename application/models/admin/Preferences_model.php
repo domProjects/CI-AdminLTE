@@ -11,7 +11,7 @@ class Preferences_model extends CI_Model {
 
 
     public function get_interface($table)
-    {     
+    {
         $query = $this->db->get($table);
 
         if ($query->num_rows() > 0)
