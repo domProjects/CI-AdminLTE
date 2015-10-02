@@ -1,7 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-
 class Dashboard_model extends CI_Model {
 
     public function __construct()
@@ -19,25 +18,25 @@ class Dashboard_model extends CI_Model {
 
 
     public function disk_totalspace($dir = DIRECTORY_SEPARATOR)
-    {     
+    {
         return disk_total_space($dir);
     }
 
 
     public function disk_freespace($dir = DIRECTORY_SEPARATOR)
-    {     
+    {
         return disk_free_space($dir);
     }
 
 
     public function disk_usespace($dir = DIRECTORY_SEPARATOR)
-    {     
+    {
         return $this->disk_totalspace($dir) - $this->disk_freespace($dir);
     }
 
 
     public function disk_freepercent($dir = DIRECTORY_SEPARATOR, $display_unit = FALSE)
-    {     
+    {
         if ($display_unit === FALSE)
         {
             $unit = NULL;
@@ -52,7 +51,7 @@ class Dashboard_model extends CI_Model {
 
 
     public function disk_usepercent($dir = DIRECTORY_SEPARATOR, $display_unit = FALSE)
-    {     
+    {
         if ($display_unit === FALSE)
         {
             $unit = NULL;
@@ -63,5 +62,47 @@ class Dashboard_model extends CI_Model {
         }
 
         return round(($this->disk_usespace($dir) * 100) / $this->disk_totalspace($dir), 0).$unit;
+    }
+
+
+    /* CHECK MEMORY */
+    /*
+    $memoryPhpTotal  = memory_get_usage(true);  // total
+    $memoryPhpUse    = memory_get_usage(false); // emalloc
+    $memoryPhpFree   = $memoryPhpTotal - $memoryPhpUse;
+    $memoryPercFree  = round(($memoryPhpFree * 100) / $memoryPhpTotal, 0);
+    $memoryPercUse   = round(($memoryPhpUse * 100) / $memoryPhpTotal, 0);
+    */
+    public function memory_usage()
+    {
+        return memory_get_usage();
+    }
+
+
+    public function memory_peak_usage($real = TRUE)
+    {
+        if ($real)
+        {
+            return memory_get_peak_usage(TRUE);
+        }
+        else
+        {
+            return memory_get_peak_usage(FALSE);
+        }
+    }
+
+
+    public function memory_usepercent($real = TRUE, $display_unit = FALSE)
+    {
+        if ($display_unit === FALSE)
+        {
+            $unit = NULL;
+        }
+        else
+        {
+            $unit = ' %';
+        }
+
+        return round(($this->memory_usage() * 100) / $this->memory_peak_usage($real), 0).$unit;
     }
 }

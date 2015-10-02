@@ -55,9 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                     <div class="row">
                         <div class="col-md-12">
-
 <?php
-
 /*
 if ($url_exist) {
     echo 'OK';
@@ -65,12 +63,42 @@ if ($url_exist) {
     echo 'KO';
 }
 */
-
-echo '<p>'.$disk_use_percent.'</p>';
-
-
 ?>
+                        </div>
 
+                        <div class="col-md-12">
+                            <div class="box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title">Title</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <p class="text-center"><strong>xxx</strong></p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <p class="text-center text-uppercase"><strong>Resources</strong></p>
+                                            <div class="progress-group">
+                                                <span class="progress-text">Disk use space</span>
+                                                <span class="progress-number"><strong><?php echo byte_format($disk_usespace, 2); ?></strong>/<?php echo byte_format($disk_totalspace, 2); ?></span>
+                                                <div class="progress sm">
+                                                    <div class="progress-bar progress-bar-aqua" role="progressbar" aria-valuenow="<?php echo $disk_usepercent; ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $disk_usepercent; ?>%"></div>
+                                                </div>
+                                            </div>
+                                            <div class="progress-group">
+                                                <span class="progress-text">Memory usage</span>
+                                                <span class="progress-number"><strong><?php echo byte_format($memory_usage, 2); ?></strong>/<?php echo byte_format($memory_peak_usage, 2); ?></span>
+                                                <div class="progress sm">
+                                                    <div class="progress-bar progress-bar-red" role="progressbar" aria-valuenow="<?php echo $memory_usepercent; ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo $memory_usepercent; ?>%"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>

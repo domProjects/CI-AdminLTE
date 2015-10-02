@@ -8,6 +8,7 @@ class Dashboard extends Admin_Controller {
         parent::__construct();
 
         /* Load :: Common */
+        $this->load->helper('number');
         $this->load->model('admin/dashboard_model');
     }
 
@@ -28,9 +29,15 @@ class Dashboard extends Admin_Controller {
             $this->data['breadcrumb'] = $this->breadcrumbs->show();
 
             /* Data */
-            $this->data['count_users']      = $this->dashboard_model->get_count_record('users');
-            $this->data['count_groups']     = $this->dashboard_model->get_count_record('groups');
-            $this->data['disk_use_percent'] = $this->dashboard_model->disk_usepercent(DIRECTORY_SEPARATOR, TRUE);
+            $this->data['count_users']       = $this->dashboard_model->get_count_record('users');
+            $this->data['count_groups']      = $this->dashboard_model->get_count_record('groups');
+            $this->data['disk_totalspace']   = $this->dashboard_model->disk_totalspace(DIRECTORY_SEPARATOR);
+            $this->data['disk_freespace']    = $this->dashboard_model->disk_freespace(DIRECTORY_SEPARATOR);
+            $this->data['disk_usespace']     = $this->data['disk_totalspace'] - $this->data['disk_freespace'];
+            $this->data['disk_usepercent']   = $this->dashboard_model->disk_usepercent(DIRECTORY_SEPARATOR, FALSE);
+            $this->data['memory_usage']      = $this->dashboard_model->memory_usage();
+            $this->data['memory_peak_usage'] = $this->dashboard_model->memory_peak_usage(TRUE);
+            $this->data['memory_usepercent'] = $this->dashboard_model->memory_usepercent(TRUE, FALSE);
 
 
             /* TEST */
