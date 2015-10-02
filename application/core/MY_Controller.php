@@ -43,7 +43,7 @@ class MY_Controller extends CI_Controller
                 $this->data['android'] = FALSE;
             }
 
-            if ($this->mobile_detect->browsers('IE')){
+            if ($this->mobile_detect->getBrowsers('IE')){
                 $this->data['mobile_ie'] = TRUE;
             }
             else
