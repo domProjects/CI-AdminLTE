@@ -65,14 +65,6 @@ class Dashboard_model extends CI_Model {
     }
 
 
-    /* CHECK MEMORY */
-    /*
-    $memoryPhpTotal  = memory_get_usage(true);  // total
-    $memoryPhpUse    = memory_get_usage(false); // emalloc
-    $memoryPhpFree   = $memoryPhpTotal - $memoryPhpUse;
-    $memoryPercFree  = round(($memoryPhpFree * 100) / $memoryPhpTotal, 0);
-    $memoryPercUse   = round(($memoryPhpUse * 100) / $memoryPhpTotal, 0);
-    */
     public function memory_usage()
     {
         return memory_get_usage();

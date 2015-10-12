@@ -48,6 +48,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <?php echo lang('users_password', 'password', array('class' => 'col-sm-2 control-label')); ?>
                                             <div class="col-sm-10">
                                                 <?php echo form_input($password);?>
+                                                <div class="progress" style="margin:0">
+                                                    <div class="pwstrength_viewport_progress"></div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form-group">
