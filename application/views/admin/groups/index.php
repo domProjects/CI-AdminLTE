@@ -22,6 +22,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <tr>
                                                 <th><?php echo lang('groups_name');?></th>
                                                 <th><?php echo lang('groups_description');?></th>
+                                                <th><?php echo lang('groups_color');?></th>
                                                 <th><?php echo lang('groups_action');?></th>
                                             </tr>
                                         </thead>
@@ -30,6 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                             <tr>
                                                 <td><?php echo htmlspecialchars($values->name, ENT_QUOTES, 'UTF-8'); ?></td>
                                                 <td><?php echo htmlspecialchars($values->description, ENT_QUOTES, 'UTF-8'); ?></td>
+                                                <td><i class="fa fa-stop" style="color:<?php echo $values->bgcolor; ?>"></i></td>
                                                 <td><?php echo anchor("admin/groups/edit/".$values->id, lang('actions_edit')); ?></td>
                                             </tr>
 <?php endforeach;?>

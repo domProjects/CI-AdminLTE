@@ -64,7 +64,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                 <th><?php echo lang('users_groups'); ?></th>
                                                 <td>
 <?php foreach ($user->groups as $group):?>
-                                                    <?php echo '<span class="label label-primary">'.htmlspecialchars($group->name, ENT_QUOTES, 'UTF-8').'</span>'; ?>
+                                                    <?php echo '<span class="label" style="background:'.$group->bgcolor.'">'.htmlspecialchars($group->name, ENT_QUOTES, 'UTF-8').'</span>'; ?>
 <?php endforeach?>
                                                 </td>
                                             </tr>

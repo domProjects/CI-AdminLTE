@@ -128,6 +128,9 @@ class Groups extends Admin_Controller {
 				if ($group_update)
 				{
 					$this->session->set_flashdata('message', $this->lang->line('edit_group_saved'));
+
+                    /* IN TEST */
+                    $this->db->update('groups', array('bgcolor' => $_POST['group_bgcolor']), 'id = '.$id);
 				}
 				else
 				{
@@ -157,6 +160,14 @@ class Groups extends Admin_Controller {
 			'id'    => 'group_description',
 			'value' => $this->form_validation->set_value('group_description', $group->description),
             'class' => 'form-control'
+		);
+		$this->data['group_bgcolor'] = array(
+			'type'     => 'text',
+			'name'     => 'group_bgcolor',
+			'id'       => 'group_bgcolor',
+			'value'    => $this->form_validation->set_value('group_bgcolor', $group->bgcolor),
+			'data-src' => $group->bgcolor,
+            'class'    => 'form-control'
 		);
 
         /* Load Template */
