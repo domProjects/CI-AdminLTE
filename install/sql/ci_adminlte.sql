@@ -2,8 +2,6 @@
 -- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Client :  127.0.0.1
--- Généré le :  Lun 31 Août 2015 à 23:21
 -- Version du serveur :  5.6.17
 -- Version de PHP :  5.5.12
 
@@ -35,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `admin_preferences` (
   `tasks_menu` tinyint(1) NOT NULL DEFAULT '0',
   `user_menu` tinyint(1) NOT NULL DEFAULT '1',
   `ctrl_sidebar` tinyint(1) NOT NULL DEFAULT '0',
-  `transition_page` tinyint(1) NOT NULL DEFAULT '1',
+  `transition_page` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
