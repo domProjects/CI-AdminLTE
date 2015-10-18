@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `groups` (
   `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL,
   `description` varchar(100) NOT NULL,
-  `bgcolor` char(6) NOT NULL DEFAULT '000000',
+  `bgcolor` char(7) NOT NULL DEFAULT '#607D8B',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
@@ -65,8 +65,8 @@ CREATE TABLE IF NOT EXISTS `groups` (
 --
 
 INSERT INTO `groups` (`id`, `name`, `description`, `bgcolor`) VALUES
-(1, 'admin', 'Administrator', 'ff0000'),
-(2, 'members', 'General User', 'ff0000');
+(1, 'admin', 'Administrator', '#F44336'),
+(2, 'members', 'General User', '#2196F3');
 
 -- --------------------------------------------------------
 
