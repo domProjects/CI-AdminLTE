@@ -17,7 +17,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = '';
+//$config['base_url'] = '';
+$allowed_domains = array('domain1.tld', 'domain2.tld');
+$default_domain  = 'localhost/ci_adminlte_dev';
+
+if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE))
+{
+    $domain = $_SERVER['HTTP_HOST'];
+}
+else
+{
+    $domain = $default_domain;
+}
+
+if ( ! empty($_SERVER['HTTPS']))
+{
+    $config['base_url'] = 'https://'.$domain;
+}
+else
+{
+    $config['base_url'] = 'http://'.$domain;
+}
 
 /*
 |--------------------------------------------------------------------------
