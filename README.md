@@ -1,4 +1,4 @@
-# CI-AdminLTE v1.0.0
+# CI-AdminLTE v1.0.2
 
 ## Demo
 
@@ -14,14 +14,14 @@ Support for most major browsers including Chrome, Firefox, IE9+, Opera and Safar
 ## Languages
   * English
   * French
-  * Portuguese
+  * Portuguese (pending)
   * ... and more soon
  
 ## Dependencies
 | NAME | VERSION | WEB | REPO |
 | :--- | :---: | :---: | :---: |
-| CodeIgniter | 3.0.2 | [Website](http://codeigniter.com) | [Github](https://github.com/bcit-ci/CodeIgniter/)
-| AdminLTE | 2.3.1 | [Website](https://almsaeedstudio.com) | [Github](https://github.com/almasaeed2010/AdminLTE/)
+| CodeIgniter | 3.0.3 | [Website](http://codeigniter.com) | [Github](https://github.com/bcit-ci/CodeIgniter/)
+| AdminLTE | 2.3.2 | [Website](https://almsaeedstudio.com) | [Github](https://github.com/almasaeed2010/AdminLTE/)
 | Bootstrap | 3.3.5 | [Website](http://getbootstrap.com) | [Github](https://github.com/twbs/bootstrap)
 | Ion Auth | 2.0.0 | [Website](http://benedmunds.com/ion_auth) | [Github](https://github.com/benedmunds/CodeIgniter-Ion-Auth)
 | jQuery | 2.1.4 | [Website](http://jquery.com) | [Github](https://github.com/jquery/jquery)
