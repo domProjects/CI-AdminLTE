@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 //$config['base_url'] = '';
 $allowed_domains = array('domain1.tld', 'domain2.tld');
-$default_domain  = 'localhost/ci_adminlte_dev';
+$default_domain  = 'localhost/ci_adminlte';
 
 if (in_array($_SERVER['HTTP_HOST'], $allowed_domains, TRUE))
 {
