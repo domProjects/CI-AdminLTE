@@ -1058,14 +1058,15 @@ class Ion_auth_model extends CI_Model
         if ($this->config->item('track_login_attempts', 'ion_auth')) {
             $ip_address = $this->_prepare_ip($this->input->ip_address());
             $this->db->select('1', FALSE);
-            if ($this->config->item('track_login_ip_address', 'ion_auth')) $this->db->where('ip_address', $ip_address);
-            else if (strlen($identity) > 0) $this->db->or_where('login', $identity);
+            if ($this->config->item('track_login_ip_address', 'ion_auth')) {
+            	$this->db->where('ip_address', $ip_address);
+            	$this->db->where('login', $identity);
+            } else if (strlen($identity) > 0) $this->db->or_where('login', $identity);
             $qres = $this->db->get($this->tables['login_attempts']);
             return $qres->num_rows();
         }
         return 0;
 	}
-
 	/**
 	 * Get a boolean to determine if an account should be locked out due to
 	 * exceeded login attempts within a given period
@@ -1431,7 +1432,7 @@ class Ion_auth_model extends CI_Model
 		// Then insert each into the database
 		foreach ($group_ids as $group_id)
 		{
-			if ($this->db->insert($this->tables['users_groups'], array( $this->join['groups'] => (int)$group_id, $this->join['users'] => (int)$user_id)))
+			if ($this->db->insert($this->tables['users_groups'], array( $this->join['groups'] => (float)$group_id, $this->join['users'] => (float)$user_id)))
 			{
 				if (isset($this->_cache_groups[$group_id])) {
 					$group_name = $this->_cache_groups[$group_id];
@@ -1477,7 +1478,7 @@ class Ion_auth_model extends CI_Model
 
 			foreach($group_ids as $group_id)
 			{
-				$this->db->delete($this->tables['users_groups'], array($this->join['groups'] => (int)$group_id, $this->join['users'] => (int)$user_id));
+				$this->db->delete($this->tables['users_groups'], array($this->join['groups'] => (float)$group_id, $this->join['users'] => (float)$user_id));
 				if (isset($this->_cache_user_in_group[$user_id]) && isset($this->_cache_user_in_group[$user_id][$group_id]))
 				{
 					unset($this->_cache_user_in_group[$user_id][$group_id]);
@@ -1489,7 +1490,7 @@ class Ion_auth_model extends CI_Model
 		// otherwise remove user from all groups
 		else
 		{
-			if ($return = $this->db->delete($this->tables['users_groups'], array($this->join['users'] => (int)$user_id))) {
+			if ($return = $this->db->delete($this->tables['users_groups'], array($this->join['users'] => (float)$user_id))) {
 				$this->_cache_user_in_group[$user_id] = array();
 			}
 		}
