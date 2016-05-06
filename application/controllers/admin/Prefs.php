@@ -141,7 +141,7 @@ class Prefs extends Admin_Controller {
                 'tasks_menu'         => '0',
                 'user_menu'          => '1',
                 'ctrl_sidebar'       => '0',
-                'transition_page'    => '1'
+                'transition_page'    => '0'
             );
 
             $this->preferences_model->update_interfaces('admin_preferences', $data);
