@@ -16,7 +16,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h3 class="control-sidebar-heading">Recent Activity</h3>
                         <ul class="control-sidebar-menu">
                             <li>
-                                <a href="javascript::;">
+                                <a href="#">
                                     <i class="menu-icon fa fa-birthday-cake bg-red"></i>
                                     <div class="menu-info">
                                         <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
@@ -29,10 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <h3 class="control-sidebar-heading">Tasks Progress</h3>
                         <ul class="control-sidebar-menu">
                             <li>
-                                <a href="javascript::;">
+                                <a href="#">
                                     <h4 class="control-sidebar-subheading">Custom Template Design<span class="label label-danger pull-right">70%</span></h4>
                                     <div class="progress progress-xxs">
-                                        <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                                        <div class="progress-bar progress-bar-danger" style="width:70%"></div>
                                     </div>
                                 </a>
                             </li>
@@ -61,7 +61,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="form-group">
                                 <label class="control-sidebar-subheading">
                                     Delete chat history
-                                    <a href="javascript::;" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+                                    <a href="#" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
                                 </label>
                             </div>
                         </form>
