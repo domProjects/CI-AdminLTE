@@ -14,7 +14,7 @@ Support for most major browsers including Chrome, Firefox, IE9+, Opera and Safar
 ## Languages
   * English
   * French
-  * Portuguese (pending)
+  * Portuguese (translation by [marcelod](https://github.com/marcelod))
   * ... and more soon
  
 ## Dependencies
