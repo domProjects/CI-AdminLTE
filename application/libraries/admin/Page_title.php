@@ -9,7 +9,7 @@ class Page_title {
     private $page_title = array();
 
     public function __construct()
-    {	
+    {
 		$this->CI =& get_instance();
 
         $this->pagetitle_open     = $this->CI->config->item('pagetitle_open');

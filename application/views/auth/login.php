@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <div class="col-xs-8">
                             <div class="checkbox icheck">
                                 <label>
-                                    <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"'); ?><?php echo lang('auth_remember_me'); ?>
+                                    <?php echo form_checkbox('remember', '1', FALSE, 'id="remember"'); ?> <?php echo lang('auth_remember_me'); ?>
                                 </label>
                             </div>
                         </div>

@@ -385,12 +385,50 @@ class Users extends Admin_Controller {
 
         /* Data */
         $id = (int) $id;
+        $user = $this->ion_auth->user($id)->row();
 
+        $this->data['userfile']  = 'userfile';
         $this->data['user_info'] = $this->ion_auth->user($id)->result();
         foreach ($this->data['user_info'] as $k => $user)
         {
             $this->data['user_info'][$k]->groups = $this->ion_auth->get_users_groups($user->id)->result();
         }
+
+        $config['upload_path']          = base_url($avatar_dir);
+        $config['allowed_types']        = 'gif|jpg|png';
+        $config['max_size']             = 100;
+        $config['max_width']            = 1024;
+        $config['max_height']           = 768;
+        $this->load->library('upload', $config);
+
+        if ($_POST && $this->upload->do_upload('userfile'))
+        {
+
+            $data = array(
+                'avatar' => $this->upload->data('file_name')
+            );
+
+            if($this->ion_auth->update($user->id, $data))
+            {
+                $this->session->set_flashdata('message', $this->ion_auth->messages());
+                redirect('/admin/users/profile/'.$user->id, 'refresh');
+
+            }
+            else
+            {
+                $this->session->set_flashdata('message', $this->ion_auth->errors());
+
+                if ($this->ion_auth->is_admin())
+                {
+                    redirect('auth', 'refresh');
+                }
+                else
+                {
+                    redirect('/', 'refresh');
+                }
+            }
+        }
+                $this->data['upload_message'] =  $this->upload->display_errors() ? $this->upload->display_errors(): null;
 
         /* Load Template */
 		$this->template->admin_render('admin/users/profile', $this->data);
