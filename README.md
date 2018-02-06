@@ -1,13 +1,28 @@
-# CI-AdminLTE v1.7.0
+# CI-AdminLTE
 CodeIgniter 3.x with AdminLTE 2.3.x
+
+## Installation
+
+1. Unzip the package.
+2. Upload the `CI-AdminLTE` folders and files to your server. Normally the index.php file will be at your root.
+3. Open the `application/config/common/dp_config.php` file with a text editor and set your base URL:
+
+```
+// Fill in the file of your project here when you develop locally.
+$host_dev = 'CI-AdminLTE';
+
+// Fill in the domain name here when your project is online.
+// Example : www.johndoe.com
+//           johndoe.com
+$host_prod = 'your_domain.tld';
+```
 
 ## Demo
 
 Coming soon
 
 ### Login
- * Email : `admin@admin.com`
- * Password : `password`
+ * Email : `admin@admin.com` / Password : `password`
 
 ## Browser Compatibility
 Support for most major browsers including Chrome, Firefox, IE9+, Opera and Safari.
