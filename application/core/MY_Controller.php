@@ -10,6 +10,7 @@ class MY_Controller extends CI_Controller
         /* COMMON :: ADMIN & PUBLIC */
         /* Load */
         $this->load->database();
+        $this->load->add_package_path(APPPATH . 'third_party/ion_auth/');
         $this->load->config('common/dp_config');
         $this->load->config('common/dp_language');
         $this->load->library(array('form_validation', 'ion_auth', 'template', 'common/mobile_detect'));
