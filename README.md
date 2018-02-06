@@ -6,7 +6,6 @@ CodeIgniter 3.x with AdminLTE 2.3.x
 1. Unzip the package.
 2. Upload the `CI-AdminLTE` folders and files to your server. Normally the index.php file will be at your root.
 3. Open the `application/config/common/dp_config.php` file with a text editor and set your base URL:
-
 ```
 // Fill in the file of your project here when you develop locally.
 $host_dev = 'CI-AdminLTE';
@@ -16,6 +15,8 @@ $host_dev = 'CI-AdminLTE';
 //           johndoe.com
 $host_prod = 'your_domain.tld';
 ```
+4. Create a table named `ci_adminlte` and inject the data from the `install/sql/ci_adminlte.sql` file.
+5. Change if necessary the connection information to your database in the `application/config/database.php` file.
 
 ## Demo
 
