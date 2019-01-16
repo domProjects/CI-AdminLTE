@@ -1,5 +1,5 @@
 # CI-AdminLTE
-CodeIgniter 3.x with AdminLTE 2.3.x
+CodeIgniter 3.1.10 with AdminLTE 2.3.11
 
 ## Installation
 
@@ -43,7 +43,7 @@ It should work on 5.4.8 as well, but we strongly advise you NOT to run such old 
 ## Dependencies
 | NAME | VERSION | WEB | REPO |
 | :--- | :---: | :---: | :---: |
-| CodeIgniter | 3.1.9 | [Website](https://codeigniter.com) | [Github](https://github.com/bcit-ci/CodeIgniter/)
+| CodeIgniter | 3.1.10 | [Website](https://codeigniter.com) | [Github](https://github.com/bcit-ci/CodeIgniter/)
 | AdminLTE | 2.3.11 | [Website](https://adminlte.io) | [Github](https://github.com/almasaeed2010/AdminLTE/)
 | Bootstrap | 3.3.7 | [Website](https://getbootstrap.com/docs/3.3) | [Github](https://github.com/twbs/bootstrap)
 | Ion Auth | 2.6.0 | [Website](http://benedmunds.com/ion_auth) | [Github](https://github.com/benedmunds/CodeIgniter-Ion-Auth)
