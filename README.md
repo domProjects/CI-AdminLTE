@@ -20,7 +20,7 @@ $host_prod = 'your_domain.tld';
 
 ## Demo
 
-Coming soon
+https://demo.domprojects.com/ci-adminlte/auth/login
 
 ### Login
  * Email : `admin@admin.com` / Password : `password`
